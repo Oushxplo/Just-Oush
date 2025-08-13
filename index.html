@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Oush</title>
+  <style>
+    :root {
+      --purple: #b380ff;
+      --pink: #ff80bf;
+      --bg1: #2d0066;
+      --bg2: #1a1a1a;
+      --card: rgba(30, 30, 50, 0.85);
+    }
+    * { box-sizing: border-box; }
+
+    body {
+      background: linear-gradient(120deg, var(--bg1) 0%, var(--bg2) 100%);
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      animation: fadeIn 0.9s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      position: relative;
+      background: var(--card);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px #b380ff44;
+      padding: 80px 28px 28px 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      border: 1.5px solid #b380ff33;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(255,128,191,0.4);
+    }
+
+    .avatar {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    .profile-pic {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      border: 4px solid var(--purple);
+      box-shadow: 0 0 24px rgba(179,128,255,0.5);
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-pic:hover {
+      transform: scale(1.06) rotate(-2deg);
+      box-shadow: 0 0 40px rgba(255,128,191,0.6);
+    }
+
+    .username {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      margin: 8px 0 6px 0;
+      background: linear-gradient(90deg, var(--purple), var(--pink));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tag {
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: inline-block;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+    }
+    .tag:hover { color: var(--pink); text-shadow: 0 0 8px #ff80bf88; }
+
+    .description {
+      font-size: 15px;
+      margin: 10px 0 22px 0;
+      color: #e0e0e0;
+      font-style: italic;
+      letter-spacing: 0.6px;
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--purple) 0%, var(--pink) 100%);
+      border: none;
+      padding: 13px 16px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 2px 12px #b380ff33;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+    .link-button img {
+      width: 20px;
+      height: 20px;
+    }
+    .link-button:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(255,128,191,0.35);
+    }
+    .link-button:active { transform: translateY(0); opacity: 0.9; }
+
+    @media (max-width: 400px) {
+      .username { font-size: 24px; }
+      .profile-pic { width: 112px; height: 112px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="avatar">
+      <img src="foto.jpg" alt="Foto profil Just Oush" class="profile-pic" />
+    </div>
+
+    <h1 class="username">Just Oush</h1>
+    <a href="#" class="tag" aria-label="username @oushxplo">@oushxplo</a>
+    <p class="description">Love you hurt? you strong made by your hurt!</p>
+
+    <div class="links-container">
+      <a href="https://github.com/Oushxplo/Sertifikat/blob/main/README.md" class="link-button" target="_blank" rel="noopener noreferrer">
+        <img src="certificate.png" alt="Sertifikat" /> Sertifikat
+      </a>
+      <a href="http://t.me/Ousshhhh" class="link-button" target="_blank" rel="noopener noreferrer">
+        <img src="telegram.png" alt="Telegram" /> Telegram
+      </a>
+      <a href="https://www.instagram.com/oushxplo?igsh=MTZnanZhd2cxZTJ4eg==" class="link-button" target="_blank" rel="noopener noreferrer">
+        <img src="instagram.png" alt="Instagram" /> Instagram
+      </a>
+      <a href="#" class="link-button" target="_blank" rel="noopener noreferrer">
+        <img src="discord.png" alt="Discord" /> Discord
+      </a>
+    </div>
+  </main>
+</body>
+</html>
